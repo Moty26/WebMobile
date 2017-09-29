@@ -12,8 +12,10 @@ namespace LaboratorioHidalgoMotyvay
 {
     public partial class DatosLaborales : Form
     {
+        public LaboratorioHidalgoMotyvay.NucleoFamiliar NUCLEO;
         public DatosLaborales()
         {
+            this.NUCLEO = new LaboratorioHidalgoMotyvay.NucleoFamiliar();
             InitializeComponent();
         }
 
@@ -82,7 +84,7 @@ namespace LaboratorioHidalgoMotyvay
                 return true;
             }
         }
-        private Boolean buttonVerificar_Click(object sender, EventArgs e)
+        private void buttonVerificar_Click(object sender, EventArgs e)
         {
             string MensajeDeVariablesPorRellenar = "";
             if (this.textNombreEmpresa.Text == "")
@@ -115,14 +117,12 @@ namespace LaboratorioHidalgoMotyvay
                 if (!respuesta)
                 {
                     MessageBox.Show("El Rut ingresado es incorrecto");
-                    return false;
                 }
-                return true;
+
             }
             else
             {
                 MessageBox.Show(MensajeDeVariablesPorRellenar);
-                return false;
             }
 
         }
@@ -136,5 +136,8 @@ namespace LaboratorioHidalgoMotyvay
             this.textTelefonoLaboral.Text = "";
             this.textMailLaboral.Text = "";
         }
+
+
     }
-}
+    }
+    }

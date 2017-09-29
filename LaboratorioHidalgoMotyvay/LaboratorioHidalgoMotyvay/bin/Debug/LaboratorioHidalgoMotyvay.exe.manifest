@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LaboratorioHidalgoMotyvay.exe" size="23536">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LaboratorioHidalgoMotyvay.exe" size="24048">
       <assemblyIdentity name="LaboratorioHidalgoMotyvay" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>AxOdcLfdmHM7e9rtn1+v88k//7qwSZGD4u+v+DMVd/g=</dsig:DigestValue>
+        <dsig:DigestValue>1OtqCSx7kIHewCUlfUVZSL+b03Z4n4Ee2vtImhiOrFw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
