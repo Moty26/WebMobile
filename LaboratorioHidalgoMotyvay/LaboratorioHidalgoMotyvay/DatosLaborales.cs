@@ -29,8 +29,60 @@ namespace LaboratorioHidalgoMotyvay
         {
 
         }
-
-        private void buttonVerificar_Click(object sender, EventArgs e)
+        public Boolean Validar_Rut()
+        {/*DRJ V1.0*/
+            Boolean respuesta = false;
+            char[] charArray = this.textRutEmpresa.Text.ToCharArray();
+            int _calculo = 0;
+            int _contador = 2;
+            Array.Reverse(charArray);
+            try
+            {
+                for (int x = 0; x <= this.textRutEmpresa.Text.Length - 1; x++)
+                {
+                    _calculo += ((int)charArray[x] - 48) * _contador;
+                    if (_contador == 7)
+                    {
+                        _contador = 2;
+                    }
+                    else
+                    {
+                        _contador = _contador + 1;
+                    }
+                }
+                _calculo = _calculo %= 11;
+                _calculo = 11 - _calculo;
+            }
+            catch
+            {
+                return respuesta;
+            }
+            if (_calculo <= 9)
+            {
+                if (_calculo.ToString() != this.textVerificador.Text.ToUpper())
+                {
+                    return respuesta;
+                }
+                return true;
+            }
+            else if (_calculo == 11)
+            {
+                if ("0" != this.textVerificador.Text.ToUpper())
+                {
+                    return respuesta;
+                }
+                return true;
+            }
+            else
+            {
+                if ("K" != this.textVerificador.Text.ToUpper())
+                {
+                    return respuesta;
+                }
+                return true;
+            }
+        }
+        private Boolean buttonVerificar_Click(object sender, EventArgs e)
         {
             string MensajeDeVariablesPorRellenar = "";
             if (this.textNombreEmpresa.Text == "")
@@ -57,7 +109,22 @@ namespace LaboratorioHidalgoMotyvay
             {
                 MensajeDeVariablesPorRellenar += " Falta Celular\n";
             }
-            MessageBox.Show(MensajeDeVariablesPorRellenar);
+            if (MensajeDeVariablesPorRellenar == "")
+            {
+                Boolean respuesta = Validar_Rut();
+                if (!respuesta)
+                {
+                    MessageBox.Show("El Rut ingresado es incorrecto");
+                    return false;
+                }
+                return true;
+            }
+            else
+            {
+                MessageBox.Show(MensajeDeVariablesPorRellenar);
+                return false;
+            }
+
         }
 
         private void buttonLimpiar_Click(object sender, EventArgs e)
