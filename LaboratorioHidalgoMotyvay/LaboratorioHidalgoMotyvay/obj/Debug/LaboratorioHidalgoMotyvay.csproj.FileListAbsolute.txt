@@ -1,0 +1,16 @@
+c:\users\carolina\source\repos\LaboratorioHidalgoMotyvay\LaboratorioHidalgoMotyvay\bin\Debug\LaboratorioHidalgoMotyvay.exe.config
+c:\users\carolina\source\repos\LaboratorioHidalgoMotyvay\LaboratorioHidalgoMotyvay\bin\Debug\LaboratorioHidalgoMotyvay.exe
+c:\users\carolina\source\repos\LaboratorioHidalgoMotyvay\LaboratorioHidalgoMotyvay\bin\Debug\LaboratorioHidalgoMotyvay.pdb
+c:\users\carolina\source\repos\LaboratorioHidalgoMotyvay\LaboratorioHidalgoMotyvay\obj\Debug\LaboratorioHidalgoMotyvay.csprojResolveAssemblyReference.cache
+c:\users\carolina\source\repos\LaboratorioHidalgoMotyvay\LaboratorioHidalgoMotyvay\obj\Debug\LaboratorioHidalgoMotyvay.Form1.resources
+c:\users\carolina\source\repos\LaboratorioHidalgoMotyvay\LaboratorioHidalgoMotyvay\obj\Debug\LaboratorioHidalgoMotyvay.Properties.Resources.resources
+c:\users\carolina\source\repos\LaboratorioHidalgoMotyvay\LaboratorioHidalgoMotyvay\obj\Debug\LaboratorioHidalgoMotyvay.csproj.GenerateResource.Cache
+c:\users\carolina\source\repos\LaboratorioHidalgoMotyvay\LaboratorioHidalgoMotyvay\obj\Debug\LaboratorioHidalgoMotyvay.csproj.CoreCompileInputs.cache
+c:\users\carolina\source\repos\LaboratorioHidalgoMotyvay\LaboratorioHidalgoMotyvay\obj\Debug\LaboratorioHidalgoMotyvay.exe
+c:\users\carolina\source\repos\LaboratorioHidalgoMotyvay\LaboratorioHidalgoMotyvay\obj\Debug\LaboratorioHidalgoMotyvay.pdb
+c:\users\carolina\source\repos\LaboratorioHidalgoMotyvay\LaboratorioHidalgoMotyvay\bin\Debug\LaboratorioHidalgoMotyvay.exe.manifest
+c:\users\carolina\source\repos\LaboratorioHidalgoMotyvay\LaboratorioHidalgoMotyvay\bin\Debug\LaboratorioHidalgoMotyvay.application
+c:\users\carolina\source\repos\LaboratorioHidalgoMotyvay\LaboratorioHidalgoMotyvay\obj\Debug\LaboratorioHidalgoMotyvay.exe.manifest
+c:\users\carolina\source\repos\LaboratorioHidalgoMotyvay\LaboratorioHidalgoMotyvay\obj\Debug\LaboratorioHidalgoMotyvay.application
+c:\users\carolina\source\repos\LaboratorioHidalgoMotyvay\LaboratorioHidalgoMotyvay\obj\Debug\LaboratorioHidalgoMotyvay.DatosLaborales.resources
+C:\Users\Carolina\source\repos\LaboratorioHidalgoMotyvay\LaboratorioHidalgoMotyvay\obj\Debug\LaboratorioHidalgoMotyvay.NucleoFamiliar.resources
