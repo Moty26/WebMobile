@@ -12,8 +12,10 @@ namespace LaboratorioHidalgoMotyvay
 {
     public partial class Form1 : Form
     {
+        public LaboratorioHidalgoMotyvay.DatosLaborales EMPRESA;
         public Form1()
         {
+            this.EMPRESA = new LaboratorioHidalgoMotyvay.DatosLaborales();
             InitializeComponent();
         }
 
@@ -23,11 +25,64 @@ namespace LaboratorioHidalgoMotyvay
 
 
         }
+        public Boolean Validar_Rut() {/*DRJ V1.0*/
+            Boolean respuesta = false;
+            char[] charArray = this.textRut.Text.ToCharArray();
+            int _calculo = 0;
+            int _contador = 2;
+            Array.Reverse(charArray);
+            try
+            {
+                for (int x = 0; x <= this.textRut.Text.Length - 1; x++)
+                {
+                    _calculo += ((int)charArray[x] - 48) * _contador;
+                    if (_contador == 7)
+                    {
+                        _contador = 2;
+                    }
+                    else
+                    {
+                        _contador = _contador + 1;
+                    }
+                }
+                _calculo = _calculo %= 11;
+                _calculo = 11 - _calculo; 
+            }
+            catch
+            {
+                return respuesta;
+            }
+            if (_calculo <= 9)
+            {
+                if (_calculo.ToString() != this.textVerificador.Text.ToUpper())
+                {
+                    return respuesta;
+                }
+                return true;
+            }
+            else if (_calculo == 11)
+            {
+                if ("0" != this.textVerificador.Text.ToUpper())
+                {
+                    return respuesta;
+                }
+                return true;
+            }
+            else
+            {
+                if ("K" != this.textVerificador.Text.ToUpper())
+                {
+                    return respuesta;
+                }
+                return true;
+            }
+        }
 
-        private void Verificar_Click(object sender, EventArgs e)
-        {
+
+        private Boolean test() {
             string MensajeDeVariablesPorRellenar = "";
-            if (this.TextNombre.Text=="") {
+            if (this.TextNombre.Text == "")
+            {
                 MensajeDeVariablesPorRellenar += " Falta Nombre\n";
             }
             if (this.textApellido.Text == "")
@@ -54,7 +109,26 @@ namespace LaboratorioHidalgoMotyvay
             {
                 MensajeDeVariablesPorRellenar += " Falta Celular\n";
             }
-            MessageBox.Show(MensajeDeVariablesPorRellenar);
+            if (MensajeDeVariablesPorRellenar == "")
+            {
+                Boolean respuesta = Validar_Rut();
+                if (!respuesta)
+                {
+                    MessageBox.Show("El Rut no se encuentra");
+                    return false;
+                }
+                return true;
+            }
+            else
+            {
+                MessageBox.Show(MensajeDeVariablesPorRellenar);
+                return false;
+            }
+        }
+
+        private void Verificar_Click(object sender, EventArgs e)
+        {
+ 
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -69,10 +143,11 @@ namespace LaboratorioHidalgoMotyvay
 
         private void Siguiente_Click(object sender, EventArgs e)
         {
-            LaboratorioHidalgoMotyvay.DatosLaborales Ventana = new LaboratorioHidalgoMotyvay.DatosLaborales();
-            this.Hide();
-            Ventana.ShowDialog();
-            this.Show();
+            if (this.test()) {
+                this.Hide();
+                this.EMPRESA.ShowDialog();
+                this.Show();
+            }
 
         }
         
@@ -86,6 +161,21 @@ namespace LaboratorioHidalgoMotyvay
             this.textFecha.Text = "";
             this.textRut.Text = "";
             this.textVerificador.Text = "";
+        }
+
+        private void Nombre_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textCelular_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Eliminar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
