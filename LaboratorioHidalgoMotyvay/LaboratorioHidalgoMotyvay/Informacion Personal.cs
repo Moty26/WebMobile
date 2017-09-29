@@ -114,7 +114,7 @@ namespace LaboratorioHidalgoMotyvay
                 Boolean respuesta = Validar_Rut();
                 if (!respuesta)
                 {
-                    MessageBox.Show("El Rut no se encuentra");
+                    MessageBox.Show("El Rut ingresado es incorrecto");
                     return false;
                 }
                 return true;
@@ -128,7 +128,44 @@ namespace LaboratorioHidalgoMotyvay
 
         private void Verificar_Click(object sender, EventArgs e)
         {
- 
+            string MensajeDeVariablesPorRellenar = "";
+            if (this.TextNombre.Text == "")
+            {
+                MensajeDeVariablesPorRellenar += " Falta Nombre\n";
+            }
+            if (this.textApellido.Text == "")
+            {
+                MensajeDeVariablesPorRellenar += " Falta Apellido\n";
+            }
+            if (this.textRut.Text == "")
+            {
+                MensajeDeVariablesPorRellenar += " Falta Rut\n";
+            }
+            if (this.textVerificador.Text == "")
+            {
+                MensajeDeVariablesPorRellenar += " Falta Digito Verificador\n";
+            }
+            if (this.textMail.Text == "")
+            {
+                MensajeDeVariablesPorRellenar += " Falta Mail\n";
+            }
+            if (this.textDireccion.Text == "")
+            {
+                MensajeDeVariablesPorRellenar += " Falta Direccion\n";
+            }
+            if (this.textCelular.Text == "")
+            {
+                MensajeDeVariablesPorRellenar += " Falta Celular\n";
+            }
+            if (MensajeDeVariablesPorRellenar == "")
+            {
+                MessageBox.Show("Formulario completo");
+
+            }
+            else
+            {
+                MessageBox.Show(MensajeDeVariablesPorRellenar);
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
