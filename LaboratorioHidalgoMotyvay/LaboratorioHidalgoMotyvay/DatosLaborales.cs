@@ -23,14 +23,14 @@ namespace LaboratorioHidalgoMotyvay
         }
         private void Limpiar_Click(object sender, EventArgs e)
         {
-            this.textNombreEmpresa.Text = "";
-            this.textRutEmpresa.Text = "";
-            this.textVerificador.Text = "";
-            this.textDireccionLaboral.Text = "";
-            this.textTelefonoLaboral.Text = "";
-            this.textMailLaboral.Text = "";
+
         }
         private void Verificar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonVerificar_Click(object sender, EventArgs e)
         {
             string MensajeDeVariablesPorRellenar = "";
             if (this.textNombreEmpresa.Text == "")
@@ -58,6 +58,16 @@ namespace LaboratorioHidalgoMotyvay
                 MensajeDeVariablesPorRellenar += " Falta Celular\n";
             }
             MessageBox.Show(MensajeDeVariablesPorRellenar);
+        }
+
+        private void buttonLimpiar_Click(object sender, EventArgs e)
+        {
+            this.textNombreEmpresa.Text = "";
+            this.textRutEmpresa.Text = "";
+            this.textVerificador.Text = "";
+            this.textDireccionLaboral.Text = "";
+            this.textTelefonoLaboral.Text = "";
+            this.textMailLaboral.Text = "";
         }
     }
 }
