@@ -15,7 +15,9 @@ namespace LaboratorioHidalgoMotyvay
         public LaboratorioHidalgoMotyvay.DatosLaborales EMPRESA;
         public Form1()
         {
-            this.EMPRESA = new LaboratorioHidalgoMotyvay.DatosLaborales();
+            this.EMPRESA = new LaboratorioHidalgoMotyvay.DatosLaborales(this.TextNombre,
+                this.textApellido, this.textRut, this.textVerificador, this.textMail,
+                this.textCelular, this.textDireccion,this.textFecha);
             InitializeComponent();
         }
 
@@ -76,6 +78,11 @@ namespace LaboratorioHidalgoMotyvay
                 }
                 return true;
             }
+        }
+        private void cargarDatos() {
+            EMPRESA.Nombre = this.TextNombre;
+            /*rellenar*/
+
         }
 
 
@@ -180,7 +187,9 @@ namespace LaboratorioHidalgoMotyvay
 
         private void Siguiente_Click(object sender, EventArgs e)
         {
-            if (this.test()) {
+            if (this.test())
+            {
+                this.cargarDatos();
                 this.Hide();
                 this.EMPRESA.ShowDialog();
                 this.Show();

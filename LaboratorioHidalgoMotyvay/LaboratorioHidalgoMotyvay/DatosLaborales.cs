@@ -12,10 +12,28 @@ namespace LaboratorioHidalgoMotyvay
 {
     public partial class DatosLaborales : Form
     {
-        public LaboratorioHidalgoMotyvay.NucleoFamiliar NUCLEO;
-        public DatosLaborales()
+        public LaboratorioHidalgoMotyvay.NucleoFamiliar FAMILIA;
+        public TextBox Nombre;
+        public TextBox Apellido;
+        public TextBox Rut;
+        public TextBox Verificador;
+        public TextBox Correo;
+        public TextBox Celular;
+        public TextBox Direccion;
+        public DateTimePicker FechaDeNacimiento;
+        public DatosLaborales(TextBox Nombre, TextBox Apellido, TextBox Rut,
+            TextBox Verificador, TextBox Correo, TextBox Celular, TextBox Direccion,
+            DateTimePicker FechaDeNacimiento)
         {
-            this.NUCLEO = new LaboratorioHidalgoMotyvay.NucleoFamiliar();
+            this.Nombre = Nombre;
+            this.Apellido = Apellido;
+            this.Rut = Rut;
+            this.Verificador = Verificador;
+            this.Correo = Correo;
+            this.Celular = Celular;
+            this.Direccion = Direccion;
+            this.FechaDeNacimiento = FechaDeNacimiento;
+            FAMILIA = new LaboratorioHidalgoMotyvay.NucleoFamiliar();
             InitializeComponent();
         }
 
@@ -118,7 +136,6 @@ namespace LaboratorioHidalgoMotyvay
                 {
                     MessageBox.Show("El Rut ingresado es incorrecto");
                 }
-
             }
             else
             {
@@ -137,7 +154,11 @@ namespace LaboratorioHidalgoMotyvay
             this.textMailLaboral.Text = "";
         }
 
-
+        private void buttonSiguiente_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            this.FAMILIA.ShowDialog();
+            this.Show();
+        }
     }
-    }
-    }
+}
